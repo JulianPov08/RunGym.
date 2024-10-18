@@ -1,0 +1,6 @@
+@RunGym.Bienestar_HostAddress = http://localhost:5259
+
+GET {{RunGym.Bienestar_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
