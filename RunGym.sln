@@ -19,7 +19,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunGym.Autenticacion", "Run
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Usuario", "Usuario", "{BD0C6A32-D9D1-432E-B932-AFBB6885255C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunGym.Usuario", "RunGym.Usuario\RunGym.Usuario.csproj", "{A902BFA1-DE10-4CCE-AEA0-4957CA5343FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunGym.Usuario", "RunGym.Usuario\RunGym.Usuario.csproj", "{A902BFA1-DE10-4CCE-AEA0-4957CA5343FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{B23BBC90-C4A0-40D4-8DD5-CECDB3DD1B71}"
+	ProjectSection(SolutionItems) = preProject
+		Comidas.cs = Comidas.cs
+		Dieta.cs = Dieta.cs
+		Ejercicios.cs = Ejercicios.cs
+		Medicamentos.cs = Medicamentos.cs
+		Metas.cs = Metas.cs
+		Usuarios.cs = Usuarios.cs
+		RutinasEjercicio.cs = RutinasEjercicio.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +67,7 @@ Global
 		{A4F46A32-A135-486E-A4A0-F34249B2B84D} = {07176E4B-3F45-403B-A44F-94A1D2A7C780}
 		{E66A3987-5D5A-4B74-BCC3-5C7BCC6F3803} = {4E685FD9-DD86-4858-B345-313FB0098FF6}
 		{A902BFA1-DE10-4CCE-AEA0-4957CA5343FE} = {BD0C6A32-D9D1-432E-B932-AFBB6885255C}
+		{B23BBC90-C4A0-40D4-8DD5-CECDB3DD1B71} = {BD0C6A32-D9D1-432E-B932-AFBB6885255C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {171B99A9-C7D8-428A-AA31-2EDA09E853D4}
