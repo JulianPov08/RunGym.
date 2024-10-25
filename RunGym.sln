@@ -32,6 +32,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{B23BBC
 		RutinasEjercicio.cs = RutinasEjercicio.cs
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contex", "Contex", "{4008B22F-06F7-45C6-A0F8-810DEF75095A}"
+	ProjectSection(SolutionItems) = preProject
+		RunGym Contex.cs = RunGym Contex.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
