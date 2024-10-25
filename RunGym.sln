@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{13C6A6A5-DCA7-4410-A83A-2B1194D8B0DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunGym.API", "WebApplication1\RunGym.API.csproj", "{13C6A6A5-DCA7-4410-A83A-2B1194D8B0DE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rutinas", "Rutinas", "{EA9D4206-667D-4F30-80F5-F4051EEE07DB}"
 EndProject
@@ -20,22 +20,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Usuario", "Usuario", "{BD0C6A32-D9D1-432E-B932-AFBB6885255C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunGym.Usuario", "RunGym.Usuario\RunGym.Usuario.csproj", "{A902BFA1-DE10-4CCE-AEA0-4957CA5343FE}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{B23BBC90-C4A0-40D4-8DD5-CECDB3DD1B71}"
-	ProjectSection(SolutionItems) = preProject
-		Comidas.cs = Comidas.cs
-		Dieta.cs = Dieta.cs
-		Ejercicios.cs = Ejercicios.cs
-		Medicamentos.cs = Medicamentos.cs
-		Metas.cs = Metas.cs
-		RutinasEjercicio.cs = RutinasEjercicio.cs
-		Usuarios.cs = Usuarios.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Context", "Context", "{4008B22F-06F7-45C6-A0F8-810DEF75095A}"
-	ProjectSection(SolutionItems) = preProject
-		RunGym Contex.cs = RunGym Contex.cs
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,7 +56,6 @@ Global
 		{A4F46A32-A135-486E-A4A0-F34249B2B84D} = {07176E4B-3F45-403B-A44F-94A1D2A7C780}
 		{E66A3987-5D5A-4B74-BCC3-5C7BCC6F3803} = {4E685FD9-DD86-4858-B345-313FB0098FF6}
 		{A902BFA1-DE10-4CCE-AEA0-4957CA5343FE} = {BD0C6A32-D9D1-432E-B932-AFBB6885255C}
-		{B23BBC90-C4A0-40D4-8DD5-CECDB3DD1B71} = {BD0C6A32-D9D1-432E-B932-AFBB6885255C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {171B99A9-C7D8-428A-AA31-2EDA09E853D4}
