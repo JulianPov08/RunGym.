@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RunGym.Run
 {
-    public class RunGym : DbContext
+    public class RunGymcontext : DbContext
     {
-        public RunGym(DbContextOptions options) : base(options)
+        public RunGymcontext(DbContextOptions options) : base(options)
         {
         }
 
