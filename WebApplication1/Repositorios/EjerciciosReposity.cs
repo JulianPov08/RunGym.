@@ -26,5 +26,20 @@ namespace RunGym.API.Repositorios
             await context.SaveAsync();
             return true;
         }
+
+        public async Task<bool> PutEjercicios(Ejercicios ejercicios)
+        {
+            context.Update(ejercicios);
+            await context.SaveAsync();
+            return true;
+
+        }
+
+        public async Task<bool> DeleteEjercicios(Ejercicios ejercicios)
+        {
+            context.ejercicios.Remove(ejercicios);
+            await context.SaveAsync();
+            return true;
+        }
     }
 }

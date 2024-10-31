@@ -26,5 +26,20 @@ namespace RunGym.API.Repositorios
             await context.SaveAsync();
             return true;
         }
+
+        public async Task<bool> PutMetas(Metas metas)
+        {
+            context.Update(metas);
+            await context.SaveAsync();
+            return true;
+
+        }
+
+        public async Task<bool> DeleteMetas(Metas metas)
+        {
+            context.metas.Remove(metas);
+            await context.SaveAsync();
+            return true;
+        }
     }
 }

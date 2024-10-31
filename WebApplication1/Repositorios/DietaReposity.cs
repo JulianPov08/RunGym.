@@ -26,5 +26,20 @@ namespace RunGym.API.Repositorios
             await context.SaveAsync();
             return true;
         }
+
+        public async Task<bool> PutDieta(Dieta dieta)
+        {
+            context.Update(dieta);
+            await context.SaveAsync();
+            return true;
+
+        }
+
+        public async Task<bool> DeleteDieta(Dieta dieta)
+        {
+            context.dieta.Remove(dieta);
+            await context.SaveAsync();
+            return true;
+        }
     }
 }

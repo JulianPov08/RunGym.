@@ -6,5 +6,9 @@ namespace RunGym.API.Repositorios.Interfaces
         Task<List<Dieta>> GetDieta();
 
         Task<bool> PostDieta(Dieta dieta);
+
+        Task<bool> PutDieta(Dieta dieta);
+
+        Task<bool> DeleteDieta(Dieta dieta);
     }
 }

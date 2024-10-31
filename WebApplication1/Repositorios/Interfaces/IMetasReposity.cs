@@ -6,5 +6,10 @@ namespace RunGym.API.Repositorios.Interfaces
         Task<List<Metas>> GetMetas();
 
         Task<bool> PostMetas(Metas metas);
+
+        Task<bool> PutMetas(Metas metas);
+
+        Task<bool> DeleteMetas(Metas metas);
+
     }
 }

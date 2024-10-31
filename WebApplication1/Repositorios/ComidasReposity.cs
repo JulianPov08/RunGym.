@@ -11,7 +11,7 @@ namespace RunGym.API.Repositorios
 
         public ComidasReposity(RunGymcontext context)
         {
-            this.context = context; 
+            this.context = context;
         }
 
         public async Task<List<Comidas>> GetComidas()
@@ -23,6 +23,21 @@ namespace RunGym.API.Repositorios
         public async Task<bool> PostComidas(Comidas comidas)
         {
             await context.comidas.AddAsync(comidas);
+            await context.SaveAsync();
+            return true;
+        }
+
+        public async Task<bool> PutComidas(Comidas comidas)
+        {
+            context.Update(comidas);
+            await context.SaveAsync();
+            return true;
+
+        }
+
+        public async Task<bool> DeleteComidas(Comidas comidas)
+        {
+            context.comidas.Remove(comidas);
             await context.SaveAsync();
             return true;
         }

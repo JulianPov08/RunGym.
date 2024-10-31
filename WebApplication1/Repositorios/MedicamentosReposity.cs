@@ -26,5 +26,20 @@ namespace RunGym.API.Repositorios
             await context.SaveAsync();
             return true;
         }
+
+        public async Task<bool> PutMedicamentos(Medicamentos medicamentos)
+        {
+            context.Update(medicamentos);
+            await context.SaveAsync();
+            return true;
+
+        }
+
+        public async Task<bool> DeleteMedicamentos(Medicamentos medicamentos)
+        {
+            context.medicamentos.Remove(medicamentos);
+            await context.SaveAsync();
+            return true;
+        }
     }
 }

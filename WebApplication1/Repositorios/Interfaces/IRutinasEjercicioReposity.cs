@@ -6,5 +6,9 @@ namespace RunGym.API.Repositorios.Interfaces
         Task<List<RutinasEjercicio>> GetRutinasEjercicio();
 
         Task<bool> PostRutinasEjercicio(RutinasEjercicio rutinasEjercicio);
+
+        Task<bool> PutRutinasEjercicio(RutinasEjercicio rutinasEjercicio);
+
+        Task<bool> DeleteRutinasEjercicios(RutinasEjercicio rutinasEjercicio);
     }
 }
