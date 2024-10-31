@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using RunGym.Run;
 namespace RunGym.API.Repositorios
 {
-    public class MedicamentosReposity
+    public class MedicamentosReposity : IMedicamentosReposity
     {
         private readonly RunGymcontext context;
 

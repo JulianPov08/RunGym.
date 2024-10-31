@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using RunGym.API;
 
-namespace WebApplication1.Controllers
+namespace RunGym.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]

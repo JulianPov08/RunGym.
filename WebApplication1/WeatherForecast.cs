@@ -1,4 +1,4 @@
-namespace WebApplication1
+namespace RunGym.API
 {
     public class WeatherForecast
     {

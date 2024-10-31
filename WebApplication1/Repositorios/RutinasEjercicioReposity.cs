@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using RunGym.Run;
 namespace RunGym.API.Repositorios
 {
-    public class RutinasEjercicioReposity
+    public class RutinasEjercicioReposity : IRutinasEjercicioReposity
     {
         private readonly RunGymcontext context;
 
@@ -39,6 +39,11 @@ namespace RunGym.API.Repositorios
             context.rutinasEjercicio.Remove(rutinasEjercicio);
             await context.SaveAsync();
             return true;
+        }
+
+        public Task<List<RutinasEjercicio>> GetRutinasEjercicio()
+        {
+            throw new NotImplementedException();
         }
     }
 }
