@@ -5,6 +5,10 @@ namespace RunGym.API.Repositorios.Interfaces
     {
         Task<List<Medicamentos>> GetMedicamentos();
 
+        Task<Medicamentos> GetMedicamentosById(int id);
+
+        Task<Medicamentos> GetMedicamentosByName(string nombre);
+
         Task<bool> PostMedicamentos(Medicamentos medicamentos);
 
         Task<bool> PutMedicamentos(Medicamentos medicamentos);

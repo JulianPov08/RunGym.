@@ -20,6 +20,18 @@ namespace RunGym.API.Repositorios
             return data;
         }
 
+        public async Task<Metas> GetMetasById(int id)
+        {
+            var data = await context.metas.Where(x => x.Id == id).FirstOrDefaultAsync();
+            return data;
+        }
+
+        public async Task<Metas> GetMetasByName(string nombre)
+        {
+            var data = await context.metas.Where(x => x.MetaPrincipal == nombre).FirstOrDefaultAsync();
+            return data;
+        }
+
         public async Task<bool> PostMetas(Metas metas)
         {
             await context.metas.AddAsync(metas);

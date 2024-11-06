@@ -5,6 +5,10 @@ namespace RunGym.API.Repositorios.Interfaces
     {
         Task<List<Dieta>> GetDieta();
 
+        Task<Dieta> GetDietaById(int id);
+
+        Task<Dieta> GetDietaByName(string nombre);
+
         Task<bool> PostDieta(Dieta dieta);
 
         Task<bool> PutDieta(Dieta dieta);

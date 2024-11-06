@@ -20,6 +20,18 @@ namespace RunGym.API.Repositorios
             return data;
         }
 
+        public async Task<Dieta> GetDietaById(int id)
+        {
+            var data = await context.dieta.Where(x => x.Id == id).FirstOrDefaultAsync();
+            return data;
+        }
+
+        public async Task<Dieta> GetDietaByName(string nombre)
+        {
+            var data = await context.dieta.Where(x => x.TipoDieta == nombre).FirstOrDefaultAsync();
+            return data;
+        }
+
         public async Task<bool> PostDieta(Dieta dieta)
         {
             await context.dieta.AddAsync(dieta);

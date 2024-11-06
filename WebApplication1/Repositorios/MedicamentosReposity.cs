@@ -20,6 +20,18 @@ namespace RunGym.API.Repositorios
             return data;
         }
 
+        public async Task<Medicamentos> GetMedicamentosById(int id)
+        {
+            var data = await context.medicamentos.Where(x => x.Id == id).FirstOrDefaultAsync();
+            return data;
+        }
+
+        public async Task<Medicamentos> GetMedicamentosByName(string nombre)
+        {
+            var data = await context.medicamentos.Where(x => x.Nombre_Medicamento == nombre).FirstOrDefaultAsync();
+            return data;
+        }
+
         public async Task<bool> PostMedicamentos(Medicamentos medicamentos)
         {
             await context.medicamentos.AddAsync(medicamentos);

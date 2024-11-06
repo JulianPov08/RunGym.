@@ -20,6 +20,18 @@ namespace RunGym.API.Repositorios
             return data;
         }
 
+        public async Task<Usuarios> GetUsuariosById(int id)
+        {
+            var data = await context.usuarios.Where(x => x.Id == id).FirstOrDefaultAsync();
+            return data;
+        }
+
+        public async Task<Usuarios> GetUsuariosByName(string nombre)
+        {
+            var data = await context.usuarios.Where(x => x.Nombre == nombre).FirstOrDefaultAsync();
+            return data;
+        }
+
         public async Task<bool> PostUsuarios(Usuarios usuarios)
         {
             await context.usuarios.AddAsync(usuarios);
