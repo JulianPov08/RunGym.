@@ -8,33 +8,33 @@ namespace RunGym.API.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-    public class ADSOController : ControllerBase
+    public class EjerciciosController : ControllerBase
     {
-        private readonly IUsuariosReposity _repository;
+        private readonly IEjerciciosReposity _repository;
 
-        public ADSOController(IUsuariosReposity repository)
+        public EjerciciosController(IEjerciciosReposity repository)
         {
             _repository = repository;
         }
 
-        [HttpGet("GetUsuarios")]
+        [HttpGet("GetEjercicios")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> GetUsuarios()
+        public async Task<IActionResult> GetEjercicios()
         {
-            var response = await _repository.GetUsuarios();
+            var response = await _repository.GetEjercicios();
             return Ok(response);
         }
 
-        [HttpPost("PostUsuarios")]
+        [HttpPost("PostEjercicios")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> PostUsuarios([FromBody] Usuarios adso)
+        public async Task<IActionResult> PostEjercicios([FromBody] Ejercicios ejercicios)
         {
             try
             {
-                var response = await _repository.PostUsuarios(adso);
+                var response = await _repository.PostEjercicios(ejercicios);
                 if (response == true)
                     return Ok("Insertado correctamente");
                 else
