@@ -45,5 +45,51 @@ namespace RunGym.API.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        [HttpPut("PutEjercicios/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+
+        public async Task<IActionResult> PutEjercicios(int id, [FromBody] Ejercicios ejercicios)
+        {
+            if (id != ejercicios.Id)
+            {
+                return BadRequest("El ID de los ejercicios no coincide.");
+            }
+
+            try
+            {
+                var response = await _repository.PutEjercicios(ejercicios);
+                if (response)
+                    return Ok("Actualizado correctamente");
+                else
+                    return NotFound("Ejercicio no encontrado");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+        [HttpDelete("DeleteEjercicios/{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+
+        public async Task<IActionResult> DeleteEjercicios(Ejercicios ejercicios)
+        {
+            try
+            {
+                var response = await _repository.DeleteEjercicios(ejercicios);
+                if (response)
+                    return NoContent();
+                else
+                    return NotFound("Ejercicio no encontrado");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
     }
 }

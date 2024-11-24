@@ -13,6 +13,6 @@ namespace RunGym.API.Repositorios.Interfaces
 
         Task<bool> PutRutinasEjercicio(RutinasEjercicio rutinasEjercicio);
 
-        Task<bool> DeleteRutinasEjercicios(RutinasEjercicio rutinasEjercicio);
+        Task<bool> DeleteRutinasEjercicio(RutinasEjercicio rutinasEjercicio);
     }
 }

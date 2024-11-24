@@ -45,5 +45,51 @@ namespace RunGym.API.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        [HttpPut("PutDieta/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+
+        public async Task<IActionResult> PutDieta(int id, [FromBody] Dieta dieta)
+        {
+            if (id != dieta.Id)
+            {
+                return BadRequest("El ID de la dieta no coincide.");
+            }
+
+            try
+            {
+                var response = await _repository.PutDieta(dieta);
+                if (response)
+                    return Ok("Actualizado correctamente");
+                else
+                    return NotFound("Dieta no encontrada");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+        [HttpDelete("DeleteDieta/{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+
+        public async Task<IActionResult> DeleteDieta(Dieta dieta)
+        {
+            try
+            {
+                var response = await _repository.DeleteDieta(dieta);
+                if (response)
+                    return NoContent();
+                else
+                    return NotFound("Dieta no encontrada");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
     }
 }

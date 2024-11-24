@@ -53,9 +53,6 @@ namespace RunGym.API.Repositorios
             return true;
         }
 
-        public Task<List<RutinasEjercicio>> GetRutinasEjercicio()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
