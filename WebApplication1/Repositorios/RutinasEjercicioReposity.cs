@@ -46,7 +46,7 @@ namespace RunGym.API.Repositorios
             return true;
         }
 
-        public async Task<bool> DeleteRutinasEjercicios(RutinasEjercicio rutinasEjercicio)
+        public async Task<bool> DeleteRutinasEjercicio(RutinasEjercicio rutinasEjercicio)
         {
             context.rutinasEjercicio.Remove(rutinasEjercicio);
             await context.SaveAsync();
