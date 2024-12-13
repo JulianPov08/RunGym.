@@ -5,21 +5,17 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunGym.API", "WebApplication1\RunGym.API.csproj", "{13C6A6A5-DCA7-4410-A83A-2B1194D8B0DE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rutinas", "Rutinas", "{EA9D4206-667D-4F30-80F5-F4051EEE07DB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentacion", "Documentacion", "{3A031594-07A5-4C96-882D-F4312A6000E2}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\trabajos sena\Analisis Desarrollo Software\PROYECTO RUNGYM\Propuesta Proyecto -RunGym\PROPUESTA TECNICA TABLA -2024\Tabla Propuesta Proyecto 2024-RunGym.docx = ..\..\trabajos sena\Analisis Desarrollo Software\PROYECTO RUNGYM\Propuesta Proyecto -RunGym\PROPUESTA TECNICA TABLA -2024\Tabla Propuesta Proyecto 2024-RunGym.docx
+	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunGym.Rutinas", "RunGym.Rutinas\RunGym.Rutinas.csproj", "{BA2790BE-39B7-4B9B-8683-3613B3C1ADF8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Codigo", "Codigo", "{830CA164-0421-4E3A-8556-177DC8031F22}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bienestar", "Bienestar", "{07176E4B-3F45-403B-A44F-94A1D2A7C780}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunGym.Bienestar", "RunGym.Bienestar\RunGym.Bienestar.csproj", "{A4F46A32-A135-486E-A4A0-F34249B2B84D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Autenticacion", "Autenticacion", "{4E685FD9-DD86-4858-B345-313FB0098FF6}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunGym.Autenticacion", "RunGym.Autenticacion\RunGym.Autenticacion.csproj", "{E66A3987-5D5A-4B74-BCC3-5C7BCC6F3803}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Usuario", "Usuario", "{BD0C6A32-D9D1-432E-B932-AFBB6885255C}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunGym.Usuario", "RunGym.Usuario\RunGym.Usuario.csproj", "{A902BFA1-DE10-4CCE-AEA0-4957CA5343FE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Script", "Script", "{640345AE-4C16-4262-8900-D45BA459EDE0}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Downloads\Scrip RunGYm\RunGym.sql = ..\..\..\..\Downloads\Scrip RunGYm\RunGym.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,31 +27,12 @@ Global
 		{13C6A6A5-DCA7-4410-A83A-2B1194D8B0DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13C6A6A5-DCA7-4410-A83A-2B1194D8B0DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13C6A6A5-DCA7-4410-A83A-2B1194D8B0DE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BA2790BE-39B7-4B9B-8683-3613B3C1ADF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BA2790BE-39B7-4B9B-8683-3613B3C1ADF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BA2790BE-39B7-4B9B-8683-3613B3C1ADF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BA2790BE-39B7-4B9B-8683-3613B3C1ADF8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A4F46A32-A135-486E-A4A0-F34249B2B84D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A4F46A32-A135-486E-A4A0-F34249B2B84D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A4F46A32-A135-486E-A4A0-F34249B2B84D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A4F46A32-A135-486E-A4A0-F34249B2B84D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E66A3987-5D5A-4B74-BCC3-5C7BCC6F3803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E66A3987-5D5A-4B74-BCC3-5C7BCC6F3803}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E66A3987-5D5A-4B74-BCC3-5C7BCC6F3803}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E66A3987-5D5A-4B74-BCC3-5C7BCC6F3803}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A902BFA1-DE10-4CCE-AEA0-4957CA5343FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A902BFA1-DE10-4CCE-AEA0-4957CA5343FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A902BFA1-DE10-4CCE-AEA0-4957CA5343FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A902BFA1-DE10-4CCE-AEA0-4957CA5343FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{BA2790BE-39B7-4B9B-8683-3613B3C1ADF8} = {EA9D4206-667D-4F30-80F5-F4051EEE07DB}
-		{A4F46A32-A135-486E-A4A0-F34249B2B84D} = {07176E4B-3F45-403B-A44F-94A1D2A7C780}
-		{E66A3987-5D5A-4B74-BCC3-5C7BCC6F3803} = {4E685FD9-DD86-4858-B345-313FB0098FF6}
-		{A902BFA1-DE10-4CCE-AEA0-4957CA5343FE} = {BD0C6A32-D9D1-432E-B932-AFBB6885255C}
+		{13C6A6A5-DCA7-4410-A83A-2B1194D8B0DE} = {830CA164-0421-4E3A-8556-177DC8031F22}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {171B99A9-C7D8-428A-AA31-2EDA09E853D4}

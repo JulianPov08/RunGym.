@@ -7,7 +7,7 @@ namespace RunGym.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    
     public class DietaController : ControllerBase
     {
         private readonly IDietaReposity _repository;

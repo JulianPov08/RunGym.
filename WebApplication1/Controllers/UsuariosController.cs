@@ -7,7 +7,7 @@ namespace RunGym.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    
     public class UsuariosController : ControllerBase
     {
         private readonly IUsuariosReposity _repository;
@@ -17,7 +17,7 @@ namespace RunGym.API.Controllers
             _repository = repository;
         }
 
-        [HttpGet("GetComidas")]
+        [HttpGet("GetUsuarios")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -27,7 +27,7 @@ namespace RunGym.API.Controllers
             return Ok(response);
         }
 
-        [HttpPost("PostComidas")]
+        [HttpPost("PostUsuarios")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> PostUsuarios([FromBody] Usuarios usuarios)

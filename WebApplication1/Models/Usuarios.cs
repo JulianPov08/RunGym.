@@ -24,6 +24,7 @@ namespace RunGym.Models
         public string TipoCuerpo { get; set; }
         public string CuerpoDeseado { get; set; }
         public string ResumenBienestar { get; set; }
+        public string Contraseña { get; set; }
 
 
     }

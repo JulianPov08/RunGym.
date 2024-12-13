@@ -12,7 +12,7 @@ namespace RunGym.Models
         public string TipoDieta { get; set; }
         public string FechaInicio { get; set; }
         public string FechaFin { get; set; }
-        public string CaloriasDiarias { get; set; }
+        public decimal CaloriasDiarias { get; set; }
         public string Macronutrientes { get; set; }
         public string Descripcion { get; set; }
 

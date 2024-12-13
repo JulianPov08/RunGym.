@@ -13,11 +13,10 @@ namespace RunGym.Run
         public DbSet<Usuarios> usuarios { get; set; }
         public DbSet<RutinasEjercicio> rutinasEjercicio { get; set; }
         public DbSet<Metas> metas { get; set; }
-        public DbSet<Medicamentos> medicamentos { get; set; }
         public DbSet<Ejercicios> ejercicios { get; set; }
         public DbSet<Dieta> dieta { get; set; }
         public DbSet<Comidas> comidas { get; set; }
-
+        public static IEnumerable<object> Comidas { get; internal set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -32,6 +31,7 @@ namespace RunGym.Run
             modelBuilder.Entity<Usuarios>().Property(u => u.Id).HasColumnName("Id").ValueGeneratedOnAdd();
             modelBuilder.Entity<Usuarios>().Property(u => u.Nombre).HasColumnName("Nombre");
             modelBuilder.Entity<Usuarios>().Property(u => u.Apellido).HasColumnName("Apellido");
+            modelBuilder.Entity<Usuarios>().Property(u => u.Contraseña).HasColumnName("Contraseña");
             modelBuilder.Entity<Usuarios>().Property(u => u.Genero).HasColumnName("Genero");
             modelBuilder.Entity<Usuarios>().Property(u => u.FechaNacimiento).HasColumnName("FechaNacimiento");
             modelBuilder.Entity<Usuarios>().Property(u => u.Email).HasColumnName("Email");
@@ -67,15 +67,6 @@ namespace RunGym.Run
             modelBuilder.Entity<Metas>().Property(u => u.FechaInicio).HasColumnName("FechaInicio");
             modelBuilder.Entity<Metas>().Property(u => u.FechaFin).HasColumnName("FechaFin");
             modelBuilder.Entity<Metas>().Property(u => u.Progreso).HasColumnName("Progreso");
-
-            modelBuilder.Entity<Medicamentos>().ToTable("Medicamentos");
-            modelBuilder.Entity<Medicamentos>().HasKey(u => u.Id);
-            modelBuilder.Entity<Medicamentos>().Property(u => u.Id).HasColumnName("Id").ValueGeneratedOnAdd();
-            modelBuilder.Entity<Medicamentos>().Property(u => u.IdUsuario).HasColumnName("IdUsuario");
-            modelBuilder.Entity<Medicamentos>().Property(u => u.Nombre_Medicamento).HasColumnName("Nombre_Medicamento");
-            modelBuilder.Entity<Medicamentos>().Property(u => u.Cantidad).HasColumnName("Cantidad");
-            modelBuilder.Entity<Medicamentos>().Property(u => u.Unidad_Medida).HasColumnName("Unidad_Medida");
-            modelBuilder.Entity<Medicamentos>().Property(u => u.Descripcion).HasColumnName("Descripcion");
 
             modelBuilder.Entity<Ejercicios>().ToTable("Ejercicios");
             modelBuilder.Entity<Ejercicios>().HasKey(u => u.Id);

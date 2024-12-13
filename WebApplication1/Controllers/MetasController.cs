@@ -7,7 +7,7 @@ namespace RunGym.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    
     public class MetasController : ControllerBase
     {
         private readonly IMetasReposity _repository;

@@ -7,14 +7,14 @@ namespace RunGym.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    
     public class ComidasController : ControllerBase
     {
-        private readonly IComidasReposity _repository;
+        private readonly IComidasReposity _comidas;
 
-        public ComidasController(IComidasReposity repository)
+        public ComidasController(IComidasReposity comidas)
         {
-            _repository = repository;
+            _comidas = comidas;
         }
 
         [HttpGet("GetComidas")]
@@ -23,7 +23,7 @@ namespace RunGym.API.Controllers
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> GetComidas()
         {
-            var response = await _repository.GetComidas();
+            var response = await _comidas.GetComidas();
             return Ok(response);
         }
 
@@ -34,7 +34,7 @@ namespace RunGym.API.Controllers
         {
             try
             {
-                var response = await _repository.PostComidas(comidas);
+                var response = await _comidas.PostComidas(comidas);
                 if (response == true)
                     return Ok("Insertado correctamente");
                 else
@@ -60,7 +60,7 @@ namespace RunGym.API.Controllers
 
             try
             {
-                var response = await _repository.PutComidas(comidas);
+                var response = await _comidas.PutComidas(comidas);
                 if (response)
                     return Ok("Actualizado correctamente");
                 else
@@ -80,7 +80,7 @@ namespace RunGym.API.Controllers
         {
             try
             {
-                var response = await _repository.DeleteComidas(comidas);
+                var response = await _comidas.DeleteComidas(comidas);
                 if (response)
                     return NoContent(); 
                 else

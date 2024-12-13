@@ -13,7 +13,11 @@ namespace RunGym.API
 
             services.AddDbContext<DatabaseService>(options => options.UseSqlServer(connectionString));
             services.AddScoped<IUsuariosReposity, UsuariosReposity>();
-
+            services.AddScoped<IRutinasEjercicioReposity, RutinasEjercicioReposity>();
+            services.AddScoped<IMetasReposity, MetasReposity>();
+            services.AddScoped<IEjerciciosReposity, EjerciciosReposity>();
+            services.AddScoped<IDietaReposity, DietaReposity>();
+            services.AddScoped<IComidasReposity, ComidasReposity>();
 
             return services;
         }

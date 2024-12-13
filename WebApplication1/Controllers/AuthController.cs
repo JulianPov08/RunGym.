@@ -27,11 +27,11 @@ namespace RunGym.API.Controllers
                 return BadRequest("Invalid client request");
             }
 
-            // Obtener las credenciales desde la configuración
-            var configuredUsername = _configuration["Auth:Username"];
-            var configuredPassword = _configuration["Auth:Password"];
+            
+            var configuredUsername = _configuration["Auth:UserName"];
+            var configuredPassword = _configuration["Auth:Contraseña"];
 
-            // Verificar las credenciales
+            
             if (login.Username == configuredUsername && login.Password == configuredPassword)
             {
                 var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
@@ -42,8 +42,8 @@ namespace RunGym.API.Controllers
                     audience: _configuration["Jwt:Audience"],
                     claims: new List<Claim>
                     {
-                    new Claim(ClaimTypes.Name, login.Username), // Usamos el email como nombre de usuario
-                    new Claim(ClaimTypes.Role, "Admin") // Puedes ajustar el rol según sea necesario
+                    new Claim(ClaimTypes.Name, login.Username), 
+                    new Claim(ClaimTypes.Role, "Usuarios")
                     },
                     expires: DateTime.Now.AddMinutes(30),
                     signingCredentials: signinCredentials
